@@ -1,5 +1,14 @@
 # Changelog
 
+## \[1.0.0-rc.5]
+
+- Properly apply the CSP when loading a route that fallbacks to index.html.
+  - [bcd43168](https://www.github.com/tauri-apps/tauri/commit/bcd43168a528dc4c54e28788430a93654c8fb452) fix(core): properly add CSP header to fallback routes ([#3641](https://www.github.com/tauri-apps/tauri/pull/3641)) on 2022-03-08
+- Fix CSP usage on Linux when changing it via the `on_web_resource_request` handler.
+  - [f5efc248](https://www.github.com/tauri-apps/tauri/commit/f5efc248da511e0924c9673b947d5de7ef69ac45) fix(core): runtime CSP changes on Linux on 2022-03-07
+- Implement `Debug` for `tauri::State`.
+  - [0b49dd56](https://www.github.com/tauri-apps/tauri/commit/0b49dd566dae21c4dcb1cf110115aab982a7dab6) impl Debug for State closes [#3676](https://www.github.com/tauri-apps/tauri/pull/3676) ([#3677](https://www.github.com/tauri-apps/tauri/pull/3677)) on 2022-03-12
+
 ## \[1.0.0-rc.4]
 
 - Run `AppHandle` cleanup code before restarting the application on the `process > relaunch` API.
